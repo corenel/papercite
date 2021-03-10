@@ -66,7 +66,7 @@ class PaperciteAuthorMatcher
             foreach ($filter->creators as $author) {
                 $ok = false;
                 foreach ($eAuthors->creators as $eAuthor) {
-                    if ($author["surname"] === $eAuthor["surname"]) {
+                    if ($author["surname"] === $eAuthor["surname"] && $author["firstname"] === $eAuthor["firstname"]) {
                         $ok = true;
                         break;
                     }
